@@ -18,3 +18,12 @@ export interface CustomError extends Error {
   error: boolean;
   id?: number;
 };
+
+export interface ImageProps {
+  src: string | undefined;
+  alt: string;
+}
+
+export type AppLoaderProps = {
+  message?: string;
+};
