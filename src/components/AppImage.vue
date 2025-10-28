@@ -1,6 +1,6 @@
 <template>
   <div class="h-full">
-    <img v-if="src" :src="src" :alt="alt" class="w-full h-full object-cover relative"/>
+    <img v-if="src" :src="src" :alt="alt" class="w-full h-full object-cover relative" />
     <div v-else>
       <slot name="fallback">
         <span>{{ 'No Image Available' }}</span>

@@ -12,5 +12,3 @@ import type { InfoChipProps } from '@/types/index.ts';
 
 defineProps<InfoChipProps>();
 </script>
-
-<style scoped></style>

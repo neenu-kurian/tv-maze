@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-1 items-center text-white absolute">
-    <StarIcon class="h-4 w-4 text-yellow-400 inline"/>
+    <StarIcon class="h-4 w-4 text-yellow-400 inline" />
     <span>{{ score.toFixed(1) }}/10</span>
   </div>
 </template>
@@ -12,7 +12,3 @@ defineProps<{
   score: number;
 }>();
 </script>
-
-<style scoped>
-
-</style>

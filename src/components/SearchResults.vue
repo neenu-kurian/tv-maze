@@ -26,7 +26,3 @@ defineProps<{
   loading: boolean;
 }>();
 </script>
-
-<style scoped>
-
-</style>

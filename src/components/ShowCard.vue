@@ -37,5 +37,3 @@ defineProps<{
   show: Show;
 }>();
 </script>
-
-<style scoped></style>

@@ -32,5 +32,3 @@ const emit = defineEmits<{
   enter: [event: Event];
 }>();
 </script>
-
-<style scoped></style>

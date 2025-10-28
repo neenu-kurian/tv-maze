@@ -8,7 +8,7 @@
           @enter="handleSearch"
           @update:modelValue="handleSearch"
         />
-        <SortDropdown v-model="sortBy" :options="sortOptions" class="mt-5 md:mt-0"/>
+        <SortDropdown v-model="sortBy" :options="sortOptions" class="mt-5 md:mt-0" />
       </div>
     </header>
 
@@ -75,7 +75,7 @@ const handleSearch = async () => {
   if (searchTimeout) {
     clearTimeout(searchTimeout);
   }
-  searchLoading.value = true
+  searchLoading.value = true;
   searchTimeout = setTimeout(async () => {
     if (searchQuery.value.trim() === '') {
       clearSearch();
@@ -111,5 +111,3 @@ onUnmounted(() => {
   }
 });
 </script>
-
-<style scoped></style>
