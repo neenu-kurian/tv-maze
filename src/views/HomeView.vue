@@ -12,12 +12,11 @@
       </div>
     </header>
 
-    <div class="px-10 mt-15">
+    <div class="pl-10 mt-15">
       <template v-if="isSearching">
         <SearchResults :search-query="searchQuery" :shows="searchResult" :loading="searchLoading" />
       </template>
 
-      <!-- Regular View -->
       <template v-else>
         <AppLoader v-if="loading" :message="'Loading shows...'" />
         <template v-else>
@@ -35,10 +34,11 @@
             <template v-else>
               <template v-for="(showsByGenre, genre) in sortedShows" :key="genre">
                 <section>
-                  <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-bold text-gray-900 m-0 pb-2">{{ genre }}</h2>
+                  <div class="flex items-center gap-2 mb-4 align-middle">
+                    <h2 class="text-xl font-bold text-gray-900 m-0">{{ genre }}</h2>
+                    <ArrowRightIcon class="w-5 h-5 text-gray-600 relative top-1/2" />
                   </div>
-                  <div role="list" class="flex gap-5 overflow-x-auto pb-4 align-stretch">
+                  <div role="list" class="flex gap-5 overflow-x-auto pb-4 align-stretch max-w-[94%]">
                     <ShowCard v-for="(show, index) in showsByGenre" :key="index" :show="show" />
                   </div>
                 </section>
@@ -61,6 +61,7 @@ import SearchInput from '@/components/SearchInput.vue';
 import AppLoader from '@/components/AppLoader.vue';
 import SortDropdown from '@/components/SortDropdown.vue';
 import { sortOptions } from '@/constants.ts';
+import { ArrowRightIcon } from '@heroicons/vue/24/outline';
 
 const showsStore = useShowsStore();
 const { loading, sortedShows, sortBy, showsByCategory, searchQuery, searchResult } =

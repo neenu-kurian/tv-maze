@@ -8,7 +8,7 @@
       Back to shows
     </div>
     <AppLoader v-if="loading" message="Loading show details..." />
-    <div v-else-if="error">{{ error }}</div>
+    <div v-else-if="error" class="text-center">{{ error }}</div>
     <div v-else-if="show">
       <div class="p-5 md:flex gap-6">
         <div class="relative">
