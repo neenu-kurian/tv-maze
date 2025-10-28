@@ -1,7 +1,5 @@
-import type { Show, CategorizedShows } from '@/types/index.ts';
+import type { Show, CategorizedShows, SearchResult, CustomError } from '@/types/index.ts';
 
-/*function to categorise shows based on genre. Returns an object with genre as key and array of shows as value.
-Loops through each show and then its genres, adding the show to the appropriate genre array in the result object.*/
 export function categorizeShows(shows: Show[]): CategorizedShows {
   const showsByCategory: CategorizedShows = {};
   shows.forEach((show: Show) => {
@@ -13,4 +11,13 @@ export function categorizeShows(shows: Show[]): CategorizedShows {
     });
   });
   return showsByCategory;
+}
+
+export function normaliseSearchResults(
+  results: SearchResult[] | CustomError,
+): Show[] | CustomError {
+  if (!('error' in results)) {
+    return results.map((result: SearchResult) => result.show);
+  }
+  return results;
 }

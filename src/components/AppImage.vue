@@ -1,12 +1,7 @@
 <template>
-  <div class="image-container">
-    <img
-      v-if="src"
-      :src="src"
-      :alt="alt"
-      class="image-content"
-    />
-    <div v-else class="fallback-content">
+  <div class="h-full">
+    <img v-if="src" :src="src" :alt="alt" class="w-full h-full object-cover relative"/>
+    <div v-else>
       <slot name="fallback">
         <span>{{ 'No Image Available' }}</span>
       </slot>
