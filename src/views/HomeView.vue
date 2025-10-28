@@ -75,8 +75,8 @@ const handleSearch = async () => {
   if (searchTimeout) {
     clearTimeout(searchTimeout);
   }
+  searchLoading.value = true
   searchTimeout = setTimeout(async () => {
-      searchLoading.value = true;
     if (searchQuery.value.trim() === '') {
       clearSearch();
       searchLoading.value = false;
