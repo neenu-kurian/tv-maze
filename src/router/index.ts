@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import ShowDetailView from '../views/ShowDetailView.vue';
+import NotFoundView from '@/views/NotFoundView.vue';
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     component: ShowDetailView,
     name: 'show-detail',
   },
+  {
+    path: '/:pathMatch(.*)*',
+    component: NotFoundView,
+    name: 'not-found',
+  }
 ];
 
 const router = createRouter({
