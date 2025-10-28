@@ -60,6 +60,7 @@ import { storeToRefs } from 'pinia';
 import SearchInput from '@/components/SearchInput.vue';
 import AppLoader from '@/components/AppLoader.vue';
 import SortDropdown from '@/components/SortDropdown.vue';
+import { sortOptions } from '@/constants.ts';
 
 const showsStore = useShowsStore();
 const { loading, sortedShows, sortBy, showsByCategory, searchQuery, searchResult } =
@@ -68,19 +69,14 @@ const error = ref<string | null>(null);
 const searchLoading = ref(false);
 const isSearching = computed(() => searchQuery.value.trim() !== '');
 
-const sortOptions = [
-  { value: 'rating-desc', label: 'Rating: High to Low' },
-  { value: 'rating-asc', label: 'Rating: Low to High' },
-];
-
 let searchTimeout: number | null = null;
 
 const handleSearch = async () => {
   if (searchTimeout) {
     clearTimeout(searchTimeout);
   }
+  searchLoading.value = true
   searchTimeout = setTimeout(async () => {
-    searchLoading.value = true;
     if (searchQuery.value.trim() === '') {
       clearSearch();
       searchLoading.value = false;
