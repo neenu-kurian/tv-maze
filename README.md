@@ -18,6 +18,10 @@ It’s built with Vue 3, *TypeScript*, and *Pinia* for state management, with a 
 
 ---
 
+<img width="1437" height="681" alt="image" src="https://github.com/user-attachments/assets/a9123b31-a02c-4b69-9c7f-38ba2fb6b0ab" />
+<img width="1437" height="747" alt="image" src="https://github.com/user-attachments/assets/2df08f31-86c5-449c-a368-f2050642b00b" />
+
+
 ## Development Process & Key Decisions
 
 ### 1. Design with Figma AI
