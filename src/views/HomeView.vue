@@ -22,7 +22,7 @@
         <template v-else>
           <template v-if="error">
             <div>
-              <p>{{ error }}</p>
+              <p role="alert">{{ error }}</p>
             </div>
           </template>
           <template v-else>

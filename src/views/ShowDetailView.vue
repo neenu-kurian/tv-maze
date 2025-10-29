@@ -8,7 +8,7 @@
       Back to shows
     </div>
     <AppLoader v-if="loading" message="Loading show details..." />
-    <div v-else-if="error" class="text-center">{{ error }}</div>
+    <div v-else-if="error" class="text-center" role="alert">{{ error }}</div>
     <div v-else-if="show">
       <div class="p-5 md:flex gap-6">
         <div class="relative">
@@ -55,7 +55,7 @@
         <h2 class="text-2xl font-bold mt-5">Top Cast</h2>
         <div class="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-6 mt-5">
           <CastMemberComponent
-            v-for="member in cast.slice(0, 8)"
+            v-for="member in cast.slice(0, MAX_CAST_MEMBERS_TO_DISPLAY)"
             :key="member.person?.id"
             :member="member"
           />
@@ -78,6 +78,7 @@ import AppLoader from '@/components/AppLoader.vue';
 import CastMemberComponent from '@/components/CastMember.vue';
 import { PhotoIcon } from '@heroicons/vue/24/outline';
 import { storeToRefs } from 'pinia';
+import { MAX_CAST_MEMBERS_TO_DISPLAY } from '@/constants';
 
 const route = useRoute();
 const showStore = useShowsStore();

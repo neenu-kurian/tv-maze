@@ -2,6 +2,7 @@
   <div class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px] float-right">
     <select
       :value="modelValue"
+      aria-label="Sort shows by rating"
       name="select-sort"
       @change="emit('update:modelValue', ($event.target as HTMLSelectElement).value)"
       class="appearance-none bg-transparent border-none py-2.5 text-sm text-gray-900 w-full cursor-pointer font-medium"
