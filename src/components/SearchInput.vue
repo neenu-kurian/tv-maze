@@ -1,7 +1,7 @@
 <template>
   <div
     role="search"
-    class="flex align-center gap-6 rounded-md border-transparent px-4 py-2 w-[60%] max-w-full bg-gray-100"
+    class="flex align-center gap-6 rounded-md border-transparent px-4 py-2 md:w-[60%] max-w-full bg-gray-100 width-full"
   >
     <slot name="icon">
       <MagnifyingGlassIcon class="w-8 h-8 flex-none basis-5" />
@@ -32,5 +32,3 @@ const emit = defineEmits<{
   enter: [event: Event];
 }>();
 </script>
-
-<style scoped></style>

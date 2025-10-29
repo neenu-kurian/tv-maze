@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-2 mb-5">
-    <RouterLink :to="{ name: 'show-detail', params: { id: show.id } }">
+    <RouterLink :to="{ name: 'show-detail', params: { id: show.id } }" class="hover:-translate-y-1 transform transition">
       <article>
         <div
           class="w-[260px] h-[420px] bg-white rounded-xl overflow-hidden relative shadow-xl shrink-0 flex flex-col transition-transform duration-200 ease-in-out"
@@ -37,5 +37,3 @@ defineProps<{
   show: Show;
 }>();
 </script>
-
-<style scoped></style>

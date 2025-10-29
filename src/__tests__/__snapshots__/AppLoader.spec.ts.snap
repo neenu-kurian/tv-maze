@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeView.vue > matches snapshot 1`] = `
+<div>
+  
+  <div
+    class="w-16 h-16 border-4 border-gray-400 rounded-full animate-spinner bg-white mt-24 mx-auto text-center"
+    data-v-8ec46d9a=""
+  />
+  <p
+    class="text-center"
+    data-v-8ec46d9a=""
+  >
+    Loading...
+  </p>
+  
+</div>
+`;

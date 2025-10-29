@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeView.vue > matches snapshot 1`] = `
+<div>
+  <div
+    class="h-full"
+  >
+    <img
+      alt="Glee Image"
+      class="w-full h-full object-cover relative"
+      src="https://static.tvmaze.com/uploads/images/original_untouched/0/73.jpg"
+    />
+  </div>
+</div>
+`;

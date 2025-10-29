@@ -27,5 +27,3 @@ defineProps<{
   member: CastMember;
 }>();
 </script>
-
-<style scoped></style>
