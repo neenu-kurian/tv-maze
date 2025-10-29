@@ -5,13 +5,13 @@ A Vue 3 + TypeScript web app that integrates with the TV Maze API to view and se
 ## Overview
 
 TV Maze Application lets users see shows by genre, view detailed information about each show, and search by titles.  
-It’s built with Vue 3, TypeScript, and *Pinia* for state management, with a responsive UI powered by *Tailwind CSS*.
+It’s built with Vue 3, *TypeScript*, and *Pinia* for state management, with a responsive UI powered by *Tailwind CSS*.
 
 ---
 
 ## Features
 
-- Search TV shows by name (with debounce)
+- Search TV shows by name
 - List shows by genre
 - Sort shows by rating
 - View Details of each show
