@@ -1,5 +1,5 @@
 <template>
-  <div class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px]">
+  <div class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px] float-right">
     <select
       :value="modelValue"
       name="select-sort"
