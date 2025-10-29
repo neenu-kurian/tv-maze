@@ -12,6 +12,7 @@ import type {
   CastMember,
   CastError,
 } from '@/types/index';
+import { sortShows } from '@/utilities/normaliser';
 import { defineStore } from 'pinia';
 
 export const useShowsStore = defineStore('shows', {
@@ -29,15 +30,8 @@ export const useShowsStore = defineStore('shows', {
       if ('error' in this.showsByCategory || !this.showsByCategory) {
         return this.showsByCategory;
       }
-      const showsToSort = { ...this.showsByCategory };
-      Object.entries(showsToSort).forEach(([genre, shows]) => {
-        showsToSort[genre] = [...shows].sort((a, b) => {
-          const ratingA = a.rating?.average || 0;
-          const ratingB = b.rating?.average || 0;
-          return this.sortBy === 'rating-asc' ? ratingA - ratingB : ratingB - ratingA;
-        });
-      });
-      return showsToSort;
+      const sortedShows = sortShows({ ...this.showsByCategory }, this.sortBy);
+      return sortedShows;
     },
     shows() {
       return this.sortedShows;

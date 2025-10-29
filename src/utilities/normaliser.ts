@@ -21,3 +21,14 @@ export function normaliseSearchResults(
   }
   return results;
 }
+
+export function sortShows(showsToSort: CategorizedShows, sortBy: string): CategorizedShows {
+  Object.entries(showsToSort).forEach(([genre, shows]) => {
+    showsToSort[genre] = [...shows].sort((show1, show2) => {
+      const ratingA = show1.rating?.average || 0;
+      const ratingB = show2.rating?.average || 0;
+      return sortBy === 'rating-asc' ? ratingA - ratingB : ratingB - ratingA;
+    });
+  });
+  return showsToSort;
+}
