@@ -42,7 +42,7 @@ Pinia was configured to:
 To prevent unnecessary API calls, search input updates are debounced (around 750 ms delay).  
 This ensures requests only trigger after the user stops typing — improving both performance and UX.
 
-### 5. Caching for Better Performance
+### 5. Reused data for Better Performance
 Fetched data is stored within Pinia stores.  
 When a user revisits a genre or a show detail page, the stored data is reused instead of hitting the API again.
 
