@@ -15,9 +15,6 @@ It’s built with Vue 3, *TypeScript*, and *Pinia* for state management, with a 
 - List shows by genre
 - Sort shows by rating
 - View Details of each show
-- Responsive UI built with TailwindCSS
-- Snapshot and unit testing
-- Built with Vue 3 Composition API + TypeScript
 
 ---
 
