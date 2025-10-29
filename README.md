@@ -22,7 +22,7 @@ It’s built with Vue 3, *TypeScript*, and *Pinia* for state management, with a 
 
 ### 1. Design with Figma AI
 Before diving into development, the layout and component structure were designed in *Figma*.  
-I used *Figma Make AI* to generate base designs and iterate quickly on color palettes, spacing, and responsive layouts.
+I used *Figma Make* to generate base designs and iterate quickly on color palettes, spacing, and responsive layouts.
 
 ### 2. Vue 3 + Composition API + TypeScript
 Vue 3 was chosen for its flexible reactivity system and Composition API, which made logic organisation cleaner.  
