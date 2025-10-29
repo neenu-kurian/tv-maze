@@ -70,7 +70,7 @@ const error = ref<string | null>(null);
 const searchLoading = ref(false);
 const isSearching = computed(() => searchQuery.value.trim() !== '');
 
-let searchTimeout: number | null = null;
+let searchTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const handleSearch = async () => {
   if (searchTimeout) {
@@ -86,7 +86,7 @@ const handleSearch = async () => {
     await showsStore.searchShows(searchQuery.value).then(() => {
       searchLoading.value = false;
     });
-  }, 1000);
+  }, 800);
 };
 
 const clearSearch = () => {
