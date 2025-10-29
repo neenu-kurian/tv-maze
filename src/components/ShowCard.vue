@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 mb-5">
+  <div class="flex flex-col gap-2 mb-5" role="listitem">
     <RouterLink :to="{ name: 'show-detail', params: { id: show.id } }" class="hover:-translate-y-1 transform transition">
       <article>
         <div

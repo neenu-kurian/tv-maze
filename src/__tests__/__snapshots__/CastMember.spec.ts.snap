@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeView.vue > matches snapshot 1`] = `
+<div>
+  <div
+    class="flex align-middle flex-col text-center gap-1 p-1"
+  >
+    <div
+      class="w-[130px] items-center h-[130px] rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm"
+    >
+      <div
+        class="h-full"
+      >
+        <img
+          alt="Sonja Sohn"
+          class="w-full h-full object-cover relative"
+          src="https://static.tvmaze.com/uploads/images/original_untouched/4/10304.jpg"
+        />
+      </div>
+    </div>
+    <div>
+      <div>
+        Sonja Sohn
+      </div>
+      <div
+        class="text-gray-500 text-[0.8rem]"
+      >
+        Det. Shakima "Kima" Greggs
+      </div>
+    </div>
+  </div>
+</div>
+`;

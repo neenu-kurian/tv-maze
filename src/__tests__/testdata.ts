@@ -89,3 +89,25 @@ export const showDetails = {
     },
   ],
 };
+
+export const CastMemberProp = {
+  person: {
+    id: 20082,
+    url: 'https://www.tvmaze.com/people/20082/sonja-sohn',
+    name: 'Sonja Sohn',
+    image: {
+      medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/4/10304.jpg',
+      original: 'https://static.tvmaze.com/uploads/images/original_untouched/4/10304.jpg',
+    },
+  },
+  character: {
+    id: 48965,
+    url: 'https://www.tvmaze.com/characters/48965/the-wire-det-shakima-kima-greggs',
+    name: 'Det. Shakima "Kima" Greggs',
+  },
+};
+
+export const sortOptions = [
+  { value: 'rating-desc', label: 'Rating: High to Low' },
+  { value: 'rating-asc', label: 'Rating: Low to High' },
+];

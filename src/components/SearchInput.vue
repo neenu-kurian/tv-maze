@@ -9,7 +9,9 @@
     <input
       :value="modelValue"
       name="search-input"
-      type="text"
+      type="search"
+      autocomplete="off"
+      aria-label="Search shows"
       @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       @keydown.enter="emit('enter', $event)"
       :placeholder="placeholder"

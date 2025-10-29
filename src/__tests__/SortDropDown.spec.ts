@@ -1,12 +1,13 @@
 import { render } from '@testing-library/vue';
-import AppLoader from '@/components/AppLoader.vue';
+import SortDropDown from '@/components/SortDropdown.vue';
 import { describe, it, expect } from 'vitest';
+import { sortOptions } from './testdata';
 
 describe('HomeView.vue', () => {
   it('matches snapshot', () => {
-    const { container } = render(AppLoader, {
+    const { container } = render(SortDropDown, {
       props: {
-        message: 'Loading...',
+        options: sortOptions,
       },
     });
     expect(container).toMatchSnapshot();

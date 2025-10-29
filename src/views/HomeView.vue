@@ -22,7 +22,7 @@
         <template v-else>
           <template v-if="error">
             <div>
-              <p>{{ error }}</p>
+              <p role="alert">{{ error }}</p>
             </div>
           </template>
           <template v-else>
@@ -60,7 +60,7 @@ import { storeToRefs } from 'pinia';
 import SearchInput from '@/components/SearchInput.vue';
 import AppLoader from '@/components/AppLoader.vue';
 import SortDropdown from '@/components/SortDropdown.vue';
-import { sortOptions } from '@/constants.ts';
+import { sortOptions, SEARCH_TIMEOUT } from '@/constants.ts';
 import { ArrowRightIcon } from '@heroicons/vue/24/outline';
 
 const showsStore = useShowsStore();
@@ -70,7 +70,7 @@ const error = ref<string | null>(null);
 const searchLoading = ref(false);
 const isSearching = computed(() => searchQuery.value.trim() !== '');
 
-let searchTimeout: number | null = null;
+let searchTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const handleSearch = async () => {
   if (searchTimeout) {
@@ -86,7 +86,7 @@ const handleSearch = async () => {
     await showsStore.searchShows(searchQuery.value).then(() => {
       searchLoading.value = false;
     });
-  }, 1000);
+  }, SEARCH_TIMEOUT);
 };
 
 const clearSearch = () => {

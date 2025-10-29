@@ -1,12 +1,13 @@
 import { render } from '@testing-library/vue';
-import AppLoader from '@/components/AppLoader.vue';
+import SearchInput from '@/components/SearchInput.vue';
 import { describe, it, expect } from 'vitest';
 
 describe('HomeView.vue', () => {
   it('matches snapshot', () => {
-    const { container } = render(AppLoader, {
+    const { container } = render(SearchInput, {
       props: {
-        message: 'Loading...',
+        modelValue: '',
+        placeholder: 'Search for TV shows...',
       },
     });
     expect(container).toMatchSnapshot();

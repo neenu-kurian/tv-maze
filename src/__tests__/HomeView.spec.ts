@@ -9,7 +9,7 @@ describe('HomeView.vue', () => {
   beforeEach(() => {
     setActivePinia(createPinia());
   });
-  it('matches snapshot', async () => {
+  it('matches snapshot', () => {
     const showsStore = useShowsStore();
     showsStore.$patch({
       showsByCategory,
