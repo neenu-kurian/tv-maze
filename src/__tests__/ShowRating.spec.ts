@@ -1,12 +1,12 @@
 import { render } from '@testing-library/vue';
-import AppLoader from '@/components/AppLoader.vue';
+import ShowRating from '@/components/ShowRating.vue';
 import { describe, it, expect } from 'vitest';
 
 describe('HomeView.vue', () => {
   it('matches snapshot', () => {
-    const { container } = render(AppLoader, {
+    const { container } = render(ShowRating, {
       props: {
-        message: 'Loading...',
+        score: 8.5,
       },
     });
     expect(container).toMatchSnapshot();

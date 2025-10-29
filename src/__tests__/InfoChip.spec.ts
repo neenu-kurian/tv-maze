@@ -1,12 +1,13 @@
 import { render } from '@testing-library/vue';
-import AppLoader from '@/components/AppLoader.vue';
+import InfoChip from '@/components/InfoChip.vue';
 import { describe, it, expect } from 'vitest';
 
 describe('HomeView.vue', () => {
   it('matches snapshot', () => {
-    const { container } = render(AppLoader, {
+    const { container } = render(InfoChip, {
       props: {
-        message: 'Loading...',
+        label: 'Duration',
+        value: '60m'
       },
     });
     expect(container).toMatchSnapshot();

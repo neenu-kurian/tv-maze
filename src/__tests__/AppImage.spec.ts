@@ -3,7 +3,7 @@ import AppImage from '@/components/AppImage.vue';
 import { describe, it, expect } from 'vitest';
 
 describe('HomeView.vue', () => {
-  it('matches snapshot', async () => {
+  it('matches snapshot', () => {
     const { container } = render(AppImage, {
       props: {
         src:'https://static.tvmaze.com/uploads/images/original_untouched/0/73.jpg' ,
