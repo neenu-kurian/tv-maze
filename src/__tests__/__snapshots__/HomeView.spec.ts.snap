@@ -37,10 +37,12 @@ exports[`HomeView.vue > matches snapshot 1`] = `
           </svg>
           
           <input
+            aria-label="Search shows"
+            autocomplete="off"
             class="border-none outline-none bg-transparent w-full text-base text-gray-900 p-0 leading-none"
             name="search-input"
             placeholder="Search for TV shows..."
-            type="text"
+            type="search"
             value=""
           />
         </div>
@@ -48,6 +50,7 @@ exports[`HomeView.vue > matches snapshot 1`] = `
           class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px] float-right mt-5 md:mt-0"
         >
           <select
+            aria-label="Sort shows by rating"
             class="appearance-none bg-transparent border-none py-2.5 text-sm text-gray-900 w-full cursor-pointer font-medium"
             name="select-sort"
             value="rating-desc"
@@ -123,39 +126,13 @@ exports[`HomeView.vue > matches snapshot 1`] = `
         >
           
           <div
-            class="flex flex-col gap-2 mb-5"
-          >
-            <router-link-stub
-              ariacurrentvalue="page"
-              class="hover:-translate-y-1 transform transition"
-              custom="false"
-              replace="false"
-              to="[object Object]"
-              viewtransition="false"
-            />
-            <h3
-              class="text-base font-medium mt-2 mb-0 text-gray-800 text-left px-2 overflow-hidden"
-            >
-              Nashville
-            </h3>
-          </div>
+            class="show-card"
+            data-testid="show-card"
+          />
           <div
-            class="flex flex-col gap-2 mb-5"
-          >
-            <router-link-stub
-              ariacurrentvalue="page"
-              class="hover:-translate-y-1 transform transition"
-              custom="false"
-              replace="false"
-              to="[object Object]"
-              viewtransition="false"
-            />
-            <h3
-              class="text-base font-medium mt-2 mb-0 text-gray-800 text-left px-2 overflow-hidden"
-            >
-              Glee
-            </h3>
-          </div>
+            class="show-card"
+            data-testid="show-card"
+          />
           
         </div>
       </section>

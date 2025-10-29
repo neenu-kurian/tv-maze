@@ -6,6 +6,51 @@ exports[`HomeView.vue > matches snapshot 1`] = `
     class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px] float-right"
   >
     <select
+      aria-label="Sort shows by rating"
+      class="appearance-none bg-transparent border-none py-2.5 text-sm text-gray-900 w-full cursor-pointer font-medium"
+      name="select-sort"
+      value="rating-desc"
+    >
+      
+      <option
+        value="rating-desc"
+      >
+        Rating: High to Low
+      </option>
+      <option
+        value="rating-asc"
+      >
+        Rating: Low to High
+      </option>
+      
+    </select>
+    <svg
+      aria-hidden="true"
+      class="w-4 h-4 text-gray-500 ml-2 shrink-0 pointer-events-none"
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`SortDropDown.vue > matches snapshot 1`] = `
+<div>
+  <div
+    class="relative inline-flex items-center bg-gray-100 rounded-lg px-3 md:min-w-[200px] float-right"
+  >
+    <select
+      aria-label="Sort shows by rating"
       class="appearance-none bg-transparent border-none py-2.5 text-sm text-gray-900 w-full cursor-pointer font-medium"
       name="select-sort"
       value="rating-desc"

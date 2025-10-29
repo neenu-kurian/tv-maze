@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue';
 import AppImage from '@/components/AppImage.vue';
 import { describe, it, expect } from 'vitest';
 
-describe('HomeView.vue', () => {
+describe('AppImage.vue', () => {
   it('matches snapshot', () => {
     const { container } = render(AppImage, {
       props: {

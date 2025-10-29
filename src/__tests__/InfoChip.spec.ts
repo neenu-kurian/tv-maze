@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue';
 import InfoChip from '@/components/InfoChip.vue';
 import { describe, it, expect } from 'vitest';
 
-describe('HomeView.vue', () => {
+describe('InfoChip.vue', () => {
   it('matches snapshot', () => {
     const { container } = render(InfoChip, {
       props: {

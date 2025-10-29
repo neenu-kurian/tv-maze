@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue';
 import ShowRating from '@/components/ShowRating.vue';
 import { describe, it, expect } from 'vitest';
 
-describe('HomeView.vue', () => {
+describe('ShowRating.vue', () => {
   it('matches snapshot', () => {
     const { container } = render(ShowRating, {
       props: {

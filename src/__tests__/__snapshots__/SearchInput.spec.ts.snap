@@ -1,34 +1,24 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`HomeView.vue > matches snapshot 1`] = `
+exports[`SearchInput.vue > matches snapshot 1`] = `
 <div>
   <div
     class="flex align-center gap-6 rounded-md border-transparent px-4 py-2 md:w-[60%] max-w-full bg-gray-100 width-full"
     role="search"
   >
     
-    <svg
-      aria-hidden="true"
+    <div
       class="w-8 h-8 flex-none basis-5"
-      data-slot="icon"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.5"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+      data-testid="search-icon"
+    />
     
     <input
+      aria-label="Search shows"
+      autocomplete="off"
       class="border-none outline-none bg-transparent w-full text-base text-gray-900 p-0 leading-none"
       name="search-input"
       placeholder="Search for TV shows..."
-      type="text"
+      type="search"
       value=""
     />
   </div>

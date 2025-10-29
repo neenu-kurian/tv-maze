@@ -1,5 +1,79 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`CastM.vue > matches snapshot 1`] = `
+<div>
+  <div
+    class="flex align-middle flex-col text-center gap-1 p-1"
+  >
+    <div
+      class="w-[130px] items-center h-[130px] rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm"
+    >
+      <div
+        data-testid="app-image"
+      >
+        
+        <div
+          aria-label="No image available for Sonja Sohn"
+          role="img"
+        >
+          <div
+            data-testid="user-icon"
+          />
+        </div>
+        
+      </div>
+    </div>
+    <div>
+      <div>
+        Sonja Sohn
+      </div>
+      <div
+        class="text-gray-500 text-[0.8rem]"
+      >
+        Det. Shakima "Kima" Greggs
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CastMember.vue > matches snapshot 1`] = `
+<div>
+  <div
+    class="flex align-middle flex-col text-center gap-1 p-1"
+  >
+    <div
+      class="w-[130px] items-center h-[130px] rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm"
+    >
+      <div
+        data-testid="app-image"
+      >
+        
+        <div
+          aria-label="No image available for Sonja Sohn"
+          role="img"
+        >
+          <div
+            data-testid="user-icon"
+          />
+        </div>
+        
+      </div>
+    </div>
+    <div>
+      <div>
+        Sonja Sohn
+      </div>
+      <div
+        class="text-gray-500 text-[0.8rem]"
+      >
+        Det. Shakima "Kima" Greggs
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`HomeView.vue > matches snapshot 1`] = `
 <div>
   <div
@@ -14,6 +88,7 @@ exports[`HomeView.vue > matches snapshot 1`] = `
         <img
           alt="Sonja Sohn"
           class="w-full h-full object-cover relative"
+          loading="lazy"
           src="https://static.tvmaze.com/uploads/images/original_untouched/4/10304.jpg"
         />
       </div>
