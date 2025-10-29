@@ -60,7 +60,7 @@ import { storeToRefs } from 'pinia';
 import SearchInput from '@/components/SearchInput.vue';
 import AppLoader from '@/components/AppLoader.vue';
 import SortDropdown from '@/components/SortDropdown.vue';
-import { sortOptions } from '@/constants.ts';
+import { sortOptions, SEARCH_TIMEOUT } from '@/constants.ts';
 import { ArrowRightIcon } from '@heroicons/vue/24/outline';
 
 const showsStore = useShowsStore();
@@ -86,7 +86,7 @@ const handleSearch = async () => {
     await showsStore.searchShows(searchQuery.value).then(() => {
       searchLoading.value = false;
     });
-  }, 800);
+  }, SEARCH_TIMEOUT);
 };
 
 const clearSearch = () => {
